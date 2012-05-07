@@ -30,9 +30,13 @@ group :development do
    gem'rspec-rails' , '2.8'
 end
 
-group :test do
-   gem'rspec' , '2.8'
+
+  group :test do
+  gem "rspec-rails",      "2.8"
+  gem "autotest"
+  gem "autotest-rails"
 end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
