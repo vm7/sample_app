@@ -6,11 +6,9 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'sqlite3'
 gem 'pg'
 gem 'execjs'
 gem 'therubyracer'
-
 gem 'json'
 
 # Gems used only for assets and not required
@@ -35,12 +33,12 @@ end
   gem "rspec-rails",      "2.8"
   gem "autotest"
   gem "autotest-rails"
+  gem 'webrat'
 end
 
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
-
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
