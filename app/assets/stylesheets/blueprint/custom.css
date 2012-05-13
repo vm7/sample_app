@@ -65,9 +65,8 @@ nav ul li a:hover {
 	text-decoration: underline;
 }
 
-.buttonAlign{
-	position:relative;
-	
+.buttonAlign {
+	position: relative;
 }
 a.signup_button {
 	margin-left: auto;
@@ -80,8 +79,6 @@ a.signup_button {
 	font-size: 150%;
 	font-weight: bold;
 	padding: 20px;
-	 
- 
 }
 
 /* Round corners */
@@ -89,5 +86,16 @@ a.signup_button {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width: 710px;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer nav {
+	float: none;
 }
 
