@@ -10,32 +10,29 @@ gem 'pg'
 gem 'execjs'
 gem 'therubyracer'
 gem 'json'
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
 
 group :development do
-   gem'rspec-rails' , '2.8'
+  gem'rspec-rails' , '2.8'
+  gem 'annotate', '~> 2.4.1.beta'
 end
 
-
-  group :test do
+group :test do
   gem "rspec-rails",      "2.8"
   gem "autotest"
   gem "autotest-rails"
   gem 'webrat'
 end
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
