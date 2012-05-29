@@ -161,3 +161,90 @@ td.sidebar {
 	list-style: square;
 }
 
+
+
+
+/* navigacija */
+
+#navigation{
+	border: 1px solid #000;
+	width:100%;
+	height:30px;
+	background-color:#999;
+	float: none;
+	padding: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	 }
+
+     #navigation ul
+     {
+   
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	float: left;
+	padding-top: 0px;
+	padding-right: 0%;
+	padding-bottom: 0px;
+	padding-left: 40px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	 }
+     #navigation ul li
+{
+	display:inline;
+	height:30px;
+	float:none;
+	list-style:none;
+	margin-left:15px;
+	position:relative;
+}
+	 
+	 
+	 #navigation li a
+     {color:#fff; text-decoration:none;}
+
+     #navigation li a:hover
+     {text-decoration:underline;}
+	 
+#navigation li ul
+{
+	
+	margin:0px;
+	padding:0px;
+	display:none;
+	position:absolute;
+	left:0px;
+	top:20px;
+	background-color:#999;
+	border: 1px solid #000;
+}
+
+      #navigation li:hover ul
+      {
+      
+      margin-top:-4px;
+      display:block;
+      width:160px;
+      }
+
+      #navigation li li
+      {
+      	alignment-baseline: central;
+      list-style:none;
+      display:list-item;
+      }
+	  
+	  #navigation li li a
+{color:#fff; text-decoration:none;}
+
+#navigation li li a:hover
+{text-decoration:underline;}
