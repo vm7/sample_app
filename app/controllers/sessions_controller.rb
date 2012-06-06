@@ -12,9 +12,8 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user #ova metoda je definirana u session helperu
-      redirect_to user
-    end
-         
+      redirect_back_or(user)
+    end       
   end
   
 

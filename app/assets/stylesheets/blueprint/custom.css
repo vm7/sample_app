@@ -1,4 +1,4 @@
-body {
+ body {
 	background: #cff;
 }
 
@@ -248,3 +248,13 @@ td.sidebar {
 
 #navigation li li a:hover
 {text-decoration:underline;}
+
+
+#edit{
+	
+	alignment-baseline: center;
+	height: 100px; 
+	margin-top: 20px;
+
+	
+}
