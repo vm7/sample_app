@@ -4,8 +4,10 @@ class UsersController < ApplicationController
 
 
   def index
+  #sleep 2
   @title="all users"
-  @users=User.all
+  @users=User.paginate(:page => params[:page], :per_page => 5 )
+  #@users=User.all#vraca array
   end
 
   def show
