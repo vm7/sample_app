@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :edit, :update]
+  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
+  before_filter :admin_user, :only => :destroy
 
 
   def index
@@ -40,13 +41,25 @@ class UsersController < ApplicationController
 
   def update
   @user=User.find(params[:id])
+  
   if @user.update_attributes(params[:user])
   redirect_to @user, :flash => { :success => "Profile Updated" }
   else
+    
     @title="Edit Users"
     render 'edit'
     end
+    
   end
+  
+  
+  def destroy
+    User.find(params[:id]).destroy
+    #flash[:success]="User deleted"
+    redirect_to users_path, :flash =>{ :success => "User deleted" }
+  end
+  
+  
   
   private 
   
@@ -59,6 +72,13 @@ class UsersController < ApplicationController
   def correct_user
   @user=User.find(params[:id])
   redirect_to(root_path) unless current_user?(@user)
+  end
+  
+  
+  #redirektaj na root path ako trenutni user ima atribut admin false
+  def admin_user
+    user=User.find(params[:id])
+    redirect_to(root_path) unless (current_user.admin? && !current_user?(user))
   end
 
 end

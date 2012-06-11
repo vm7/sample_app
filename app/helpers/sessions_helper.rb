@@ -15,6 +15,8 @@ module SessionsHelper
 
 
 
+              #vraca trenutno logiranog usera
+#<---------------------------------------------------------------------------
   def current_user=(user)
     @current_user = user
   end
@@ -23,6 +25,9 @@ module SessionsHelper
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   #@current_user ||= user_from_remember_token
   end
+#<------------------------------------------------------------------------------
+
+
 
   #poziva se vise puta session perssits
   #def current_user
