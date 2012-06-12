@@ -13,6 +13,12 @@ header img {
 	background: #000000;
 	width: auto;
 }
+
+#pic img {
+	padding: 1em;
+	background: #000000;
+	width: auto;
+}
 section {
 	margin-top: 1em;
 	font-size: 120%;

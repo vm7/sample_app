@@ -1,18 +1,4 @@
 <h1>Edit user</h1>
-
-<%= form_for(@user) do |f| %>
-
-   <%= render 'fields', :f=>f %>
-   
-    <div class="submit">
-  	<%= f.submit "Update" %> <br />
-  </div>
-
-<% end %>
-
-<div>
-<div id="edit">
-	<%= gravatar_for @user %><br />
-	<a href="http://gravatar.com/emails" >Change</a>
-</div>
+<div id="edit_users">
+<%= render 'edit'%>
 </div>

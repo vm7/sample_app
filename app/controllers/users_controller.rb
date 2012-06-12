@@ -37,10 +37,13 @@ class UsersController < ApplicationController
   #naci ce usera u bazi prema id-u
   @user=User.find(params[:id])
   @title="Edit Users"
+  
   end
 
   def update
   @user=User.find(params[:id])
+  
+
   
   if @user.update_attributes(params[:user])
   redirect_to @user, :flash => { :success => "Profile Updated" }
@@ -66,7 +69,7 @@ class UsersController < ApplicationController
   def authenticate
   #flash[:notice] = "Please sign in to acess this page."
   #redirect_to signin_path unless signed_in?
-  deny_access unless signed_in?
+  deny_access unless (signed_in? || @user)
   end
   
   def correct_user
@@ -77,8 +80,8 @@ class UsersController < ApplicationController
   
   #redirektaj na root path ako trenutni user ima atribut admin false
   def admin_user
-    user=User.find(params[:id])
-    redirect_to(root_path) unless (current_user.admin? && !current_user?(user))
+    @user=User.find(params[:id])
+    redirect_to(root_path) if !current_user.admin? && current_user?(@user)
   end
 
 end
