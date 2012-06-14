@@ -1,9 +1,36 @@
-<h1>About us :</h1>
-<p>
-	This is home page for   <%= @title %><a href="http://www.uniri.hr/"> test app 1</a>
 
-</p>
+<% if signed_in? %>
+
+
+    <table class="front" summary="for sign in users">
+    	
+      <tr>
+      	<td class="main"> 
+      	<h1 class="micropost">Update status:</h1>	
+      	<%= render 'shared/micropost_form.html.erb' %>
+      	<%= render 'shared/feed.html.erb' %>
+      	
+      	</td>
+      	
+      	<td class="sidebar round"> <%= render 'shared/user_info'%>   </td>
+      </tr>    	
+    	
+    </table>
+
+<% else %>
+
+
+<h1>About us :</h1>
+
 
 <div align="left" class="buttonAlign">
 <%= link_to 'Sign up now!', signup_path ,:class=>"signup_button round"  %>
 </div>
+
+<% end %>
+
+
+
+
+
+

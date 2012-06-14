@@ -5,6 +5,8 @@ SampleApp::Application.routes.draw do
 
   resources :users
   #get "users/new"
+  
+  resources :microposts, :only => [:create, :destroy]
  
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
