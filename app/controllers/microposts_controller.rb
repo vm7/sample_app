@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-  
+   redirect_to(:back) 
   end
   
   def update
