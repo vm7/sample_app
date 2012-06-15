@@ -9,6 +9,28 @@
 	<% if current_user?(feed_item.user) %>
 	<td> <%= link_to "delete", feed_item, :method => :delete,
 	                                       :confirm => "You sure?",
-	                                       :title => feed_item.content %> </td>
+	                                       :title => feed_item.content %> 
+	                                       
+	                                       
 	<% end %>
+	  
+	
+	<%= form_for(feed_item) do |f| %>
+	
+	
+	<% end %>
+	<% if !feed_item.like_counter? %>
+	
+	Likes : 0
+	<% else %> 
+	
+	Likes : <%= feed_item.like_counter %>   
+	<% end %>                                        
+	                                       
+     </td>
+	                         
+
+
+	
+	
 </tr>

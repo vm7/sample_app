@@ -18,10 +18,14 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-   redirect_to root_path
+  
   end
   
-  
+  def update
+   @microposts=Micropost.find(params[:id]) 
+   @microposts.increment!(:like_counter)
+   redirect_to(:back) 
+  end
   
   private
   

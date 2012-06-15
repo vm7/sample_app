@@ -10,6 +10,19 @@
 		<%= link_to "Delete", micropost, :method => :delete, 
 		                                 :confirm =>" Are you shure? ", 
 		                                 :title => micropost.content %>
+		                                 
+		                                 
+	<%= form_for(micropost) do |f| %>
+	<%= f.submit "Like" %> 
+	
+	<% end %>
+	<% if !micropost.like_counter? %>
+	
+	Likes : 0
+	<% else %> 
+	Likes : <%= micropost.like_counter %>   
+	<% end %>                            
 	</td>
 	<% end %>
+	
 </tr>
