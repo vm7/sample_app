@@ -11,12 +11,15 @@
 	                                       :confirm => "You sure?",
 	                                       :title => feed_item.content %> 
 	                                       
-	                                       
-	                                       
-	                                       <%= form_for(feed_item) do |f| %>
-	
-	
+	<%= link_to "Like", increment_path %>  
+	                               
+	                                    
+    <%= form_for(feed_item) do |f| %>
+
 	<% end %>
+	
+	
+	
 	<% if !feed_item.like_counter? %>
 	
 	Likes : 0

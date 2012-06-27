@@ -12,6 +12,7 @@ SampleApp::Application.routes.draw do
   #get "users/new"
 
   resources :microposts, :only => [:create, :destroy, :update]
+  match 'increment', :to => 'microposts#increment'
   resources :relationships, :only => [:create, :destroy ]
   
 

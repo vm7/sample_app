@@ -17,13 +17,18 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    @micropost.destroy
+   @micropost.destroy
    redirect_to(:back) 
   end
   
   def update
    @microposts=Micropost.find(params[:id]) 
-   @microposts.increment!(:like_counter)
+  
+  end
+  
+  def increment
+   #@microposts=Micropost.find(params[:id]) 
+   #@microposts.increment!(:like_counter)
    redirect_to(:back) 
   end
   
